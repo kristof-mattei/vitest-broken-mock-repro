@@ -1,10 +1,11 @@
 // uncommenting this does not work
 
-// vitest.mock("@hapi/address",  () => {
+// vitest.mock("@sideway/address", () => {
 //     return {
-//         isEmailValid: () => {
-//             return true;
-//         },
+//         email: {
+//             isValid: () => {
+//                 return true;
+//             },
+//         }
 //     };
 // });
-

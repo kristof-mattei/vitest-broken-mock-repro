@@ -5,16 +5,15 @@ export default defineConfig({
     plugins: [tsconfigPaths()],
     test: {
         // uncommenting this does not work
-        // alias: {
-        //     "@hapi/address": "@hapi/address/esm/index.js",
-        // },
+        alias: {
+        },
         globals: true,
         environment: "node",
         environmentOptions: {},
         setupFiles: ["./test.setup.ts"],
         server: {
             deps: {
-                inline: ["@hapi/address"],
+                inline: ["@sideway/address"],
             },
         },
     },

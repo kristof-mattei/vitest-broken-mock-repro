@@ -17,7 +17,6 @@
     "startCommand": "npm run test:ui"
   },
   "dependencies": {
-    "@hapi/address": "5.1.1",
     "joi": "17.13.1"
   }
 }

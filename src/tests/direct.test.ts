@@ -1,19 +1,21 @@
-import { isEmailValid } from "@hapi/address";
+import { email } from "@sideway/address";
 
-vitest.mock("@hapi/address", () => {
+vitest.mock("@sideway/address", () => {
     return {
-        isEmailValid: () => {
-            return true;
-        },
+        email: {
+            isValid: () => {
+                return true;
+            },
+        }
     };
 });
 
 describe("direct", () => {
     test("works", () => {
-        expect(isEmailValid("foo@bar.com")).toBe(true);
+        expect(email.isValid("foo@bar.com")).toBe(true);
     });
 
     test("mocking a direct import works", () => {
-        expect(isEmailValid("notValid")).toBe(true);
+        expect(email.isValid("notValid")).toBe(true);
     });
 });
